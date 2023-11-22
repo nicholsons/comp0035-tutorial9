@@ -106,3 +106,15 @@ class Admin:
         :return: True if the password is correct, otherwise False
         """
         return self._password == self._hash_password(password)
+
+    def change_password(self, old_password, new_password):
+        """
+        Checks if the old password is correct and if so, changes the password to the new password
+        :param old_password:
+        :param new_password:
+        :return: ValueError if the old password is incorrect
+        """
+        if self.check_password(old_password):
+            self._password = self._hash_password(new_password)
+        else:
+            raise ValueError(f"Current password {old_password} is incorrect")
