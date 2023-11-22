@@ -28,9 +28,9 @@ class Event:
     """ Represents the details for one paralympic event
     """
 
-    def __init__(self, event_type, year: int, country: str, host: str, noc, start, end, duration="0",
-                 disabilities_included="",
-                 countries=0, events=0, sports=0, participants_m=0, participants_f=0, participants=0, highlights=""):
+    def __init__(self, event_type, year: int, country: str, host: str, noc, start, end, duration=0,
+                 disabilities_included="", countries=0, events=0, sports=0, participants_m=0, participants_f=0,
+                 participants=0, highlights=""):
         self.event_type = event_type
         self.year = year
         self.country = country
@@ -45,7 +45,7 @@ class Event:
         self.sports = sports
         self.participants_m = participants_m
         self.participants_f = participants_f
-        self.participants = participants_m
+        self.participants = participants
         self.highlights = highlights
 
     @property
@@ -81,7 +81,7 @@ class Event:
             raise ValueError(f"NOC code {value} must be exactly 3 characters e.g. 'GER'")
 
 
-class Administrator:
+class Admin:
     """
     User class with email address, password and stores the pashword as a hash
     """
