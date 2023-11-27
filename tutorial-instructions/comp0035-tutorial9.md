@@ -187,7 +187,7 @@ In summary:
     - In the section `name: Test with pytest` change the code to run pytest with coverage
       e.g. `python -m pytest -v --cov=paralympics --cov-report term-missing `
 
-  ![GitHub Actions yaml](../assets/img/gha-yaml.png)
+  ![GitHub Actions yaml](gha-yaml.png)
 - Find the 'commit changes...' button which is likely to top right of the screen and press it. Change the message if you
   wish and then 'Commit changes' again.
 
