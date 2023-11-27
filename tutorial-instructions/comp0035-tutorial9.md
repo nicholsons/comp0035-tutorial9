@@ -402,11 +402,11 @@ setup and use CoPilot in PyCharm and VS Code.
 - Write clear 'prompts' as docstrings or comments in the code. Move the cursor to the end of the comment and then use
   the instructions for your IDE to invoke CoPilot. Alternatively use the docstring, comment or prompts in ChatGPT.
 - In VS Code write tests by going to the class code within src/paralympics/models.py, go to a class definition, right
-  click and select
+  click and select **Copilot** then **Generate Tests**.
 - In PyCharm as soon as you start to write the test case PyCharm should prompt a suggestion (assuming CoPilot is
   enabled).
 
-Try removing some of your test code and then use CoPilot or ChatGPT to generate the test for you.
+Try using CoPilot or ChatGPT to generate tests for you and compare their code to yours.
 
 ## Further information
 
