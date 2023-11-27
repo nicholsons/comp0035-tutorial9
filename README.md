@@ -2,4 +2,4 @@
 
 Starter code for the unit testing activities.
 
-The [tutorial instructions](comp0035-tutorial9.md) are duplicated here for convenience.
+The [tutorial instructions](tutorial-instructions/comp0035-tutorial9.md) are duplicated here for convenience.

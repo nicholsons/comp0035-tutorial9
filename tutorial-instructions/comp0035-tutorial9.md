@@ -173,7 +173,7 @@ coverage!
 
 How to set up GitHub Actions and understanding the .yml file was covered in the code quality week when it was used to
 report on linting results. This is also documented in
-the [continuous integration guide](https://nicholsons.github.io/comp0034-5/guide/requirements.html)
+the [continuous integration guide](https://nicholsons.github.io/comp0034-5/guide/ci.html)
 
 In summary:
 
