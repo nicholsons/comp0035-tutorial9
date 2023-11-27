@@ -187,8 +187,24 @@ In summary:
     - In the section `name: Test with pytest` change the code to run pytest with coverage
       e.g. `python -m pytest -v --cov=paralympics --cov-report term-missing `
 
-  ![GitHub Actions yaml](gha-yaml.png)
-- Find the 'commit changes...' button which is likely to top right of the screen and press it. Change the message if you
+      ```yaml
+      - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install -e .
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: |
+        python -m pytest -v --cov=paralympics --cov-report term-missing
+   ```
+   - Find the 'commit changes...' button which is likely to top right of the screen and press it. Change the message if you
   wish and then 'Commit changes' again.
 
 This workflow will now run every time you push a change to GitHub. This is useful as it runs all your tests so you can
